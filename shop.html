@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop Handmade Treasures | The Crochet</title>
+    <meta
+      name="description"
+      content="Shop handcrafted crochet treasures, cozy decor, accessories, plushies, and gift-worthy favorites."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="announcement-bar">
+        <div class="container announcement-inner">
+          <span>Free shipping on orders above $50</span>
+          <span>Handmade with love</span>
+          <div class="social-inline">
+            <span>Follow Us</span>
+            <a href="#" aria-label="Instagram">◎</a>
+            <a href="#" aria-label="Facebook">◌</a>
+            <a href="#" aria-label="Pinterest">◍</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container header-main">
+        <a class="brand" href="index.html" aria-label="The Crochet home">
+          <span class="brand-mark">Y</span>
+          <span class="brand-copy">
+            <strong>The Crochet</strong>
+            <small>Handmade with Love</small>
+          </span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link active" href="shop.html">Shop</a>
+          <a class="nav-link" href="collections.html">Collections</a>
+          <a class="nav-link" href="about.html">About Us</a>
+          <a class="nav-link" href="contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-actions" aria-label="Quick actions">
+          <button class="icon-button" type="button" aria-label="Search">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.5 3a7.5 7.5 0 015.93 12.78l4.37 4.37 1.41-1.41-4.37-4.37A7.5 7.5 0 1110.5 3zm0 2a5.5 5.5 0 100 11 5.5 5.5 0 000-11z"/></svg>
+          </button>
+          <button class="icon-button" type="button" aria-label="Account">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a4 4 0 100-8 4 4 0 000 8zm0 2c-4.42 0-8 2.24-8 5v1h16v-1c0-2.76-3.58-5-8-5z"/></svg>
+          </button>
+          <button class="icon-button cart-button" type="button" aria-label="Shopping cart">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2S15.9 22 17 22s2-.9 2-2-.9-2-2-2zM7.2 14h9.95c.75 0 1.41-.41 1.75-1.03L22 6H6.21l-.94-2H2v2h2l3.6 7.59-1.35 2.45A2 2 0 006 18h12v-2H7l1.1-2z"/></svg>
+            <span class="cart-badge">0</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero page-hero-shop">
+        <div class="container hero-inline">
+          <div class="hero-copy narrow-copy">
+            <p class="section-kicker">Handmade treasures</p>
+            <h1>Our Shop</h1>
+            <p>Handmade treasures just for you</p>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="#products">Shop Now</a>
+            </div>
+          </div>
+          <div class="hero-visual hero-visual-side">
+            <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1200&q=80" alt="Crochet bunny ornament" />
+          </div>
+        </div>
+      </section>
+
+      <section class="shop-layout section-shell" id="products">
+        <div class="container shop-content">
+          <aside class="shop-sidebar">
+            <div class="filter-block">
+              <h3>Filter by Category</h3>
+              <div class="filter-group" data-filter-group>
+                <button class="filter-btn active" type="button" data-category="all">All</button>
+                <button class="filter-btn" type="button" data-category="crochet-toys">Crochet Toys</button>
+                <button class="filter-btn" type="button" data-category="home-decor">Home Decor</button>
+                <button class="filter-btn" type="button" data-category="accessories">Accessories</button>
+                <button class="filter-btn" type="button" data-category="gifts">Gifts</button>
+              </div>
+            </div>
+
+            <div class="filter-block">
+              <h3>Price Range</h3>
+              <div class="price-range-wrap">
+                <div class="range-values">
+                  <span id="price-min-label">$5</span>
+                  <span id="price-max-label">$50+</span>
+                </div>
+                <div class="range-slider">
+                  <input id="min-price" type="range" min="5" max="50" step="5" value="5" />
+                  <input id="max-price" type="range" min="5" max="50" step="5" value="50" />
+                </div>
+              </div>
+            </div>
+
+            <div class="filter-block">
+              <h3>Colors</h3>
+              <div class="color-picker" aria-label="Color filters">
+                <button class="color-swatch active" type="button" data-color="pink" style="--swatch:#f3b4c8" aria-label="Pink"></button>
+                <button class="color-swatch" type="button" data-color="purple" style="--swatch:#bca3d8" aria-label="Purple"></button>
+                <button class="color-swatch" type="button" data-color="blue" style="--swatch:#9ec7d9" aria-label="Blue"></button>
+                <button class="color-swatch" type="button" data-color="beige" style="--swatch:#e9d7b3" aria-label="Beige"></button>
+                <button class="color-swatch" type="button" data-color="gold" style="--swatch:#d9b55c" aria-label="Gold"></button>
+                <button class="color-swatch" type="button" data-color="cream" style="--swatch:#f3e6d1" aria-label="Cream"></button>
+                <button class="color-swatch" type="button" data-color="green" style="--swatch:#b6d7b2" aria-label="Green"></button>
+                <button class="color-swatch" type="button" data-color="red" style="--swatch:#d76b6b" aria-label="Red"></button>
+                <button class="color-swatch" type="button" data-color="lavender" style="--swatch:#d7cde7" aria-label="Lavender"></button>
+                <button class="color-swatch" type="button" data-color="white" style="--swatch:#ffffff" aria-label="White"></button>
+              </div>
+            </div>
+
+            <div class="filter-block">
+              <h3>Availability</h3>
+              <div class="check-list">
+                <label class="check-item">
+                  <input type="checkbox" checked data-availability="in-stock" />
+                  <span>In stock</span>
+                </label>
+                <label class="check-item">
+                  <input type="checkbox" data-availability="pre-order" />
+                  <span>Pre - Order</span>
+                </label>
+              </div>
+            </div>
+          </aside>
+
+          <div class="shop-main">
+            <div class="shop-toolbar">
+              <div class="search-box">
+                <label class="sr-only" for="shop-search">Search products</label>
+                <input id="shop-search" type="search" placeholder="Search handmade pieces..." aria-label="Search products" />
+              </div>
+            </div>
+
+            <div class="products-header">
+              <h2>Handmade with Love</h2>
+              <p>Discover unique, handcrafted items made with care.</p>
+            </div>
+
+            <div class="product-grid shop-grid" id="shop-product-grid"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a class="brand footer-brand-link" href="index.html">
+            <span class="brand-mark">Y</span>
+            <span class="brand-copy">
+              <strong>The Crochet</strong>
+              <small>Handmade with Love</small>
+            </span>
+          </a>
+          <p>Beautiful handmade crochet pieces designed to bring comfort, joy, and a little extra charm to everyday living.</p>
+        </div>
+
+        <div>
+          <h3>Navigation</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="collections.html">Collections</a></li>
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Shop</h3>
+          <ul>
+            <li><a href="shop.html">Crochet Toys</a></li>
+            <li><a href="shop.html">Home Decor</a></li>
+            <li><a href="shop.html">Accessories</a></li>
+            <li><a href="shop.html">Gifts</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Contact</h3>
+          <ul>
+            <li>hello@yarnandcrochet.com</li>
+            <li>+92 300 1234567</li>
+            <li>Lahore, Pakistan</li>
+            <li>Mon–Sat, 10AM–6PM</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#" aria-label="Instagram">◎</a>
+            <a href="#" aria-label="Facebook">◌</a>
+            <a href="#" aria-label="Pinterest">◍</a>
+            <a href="#" aria-label="YouTube">◐</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom container">
+        <p>© 2025 The Crochet. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">FAQ</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
