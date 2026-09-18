@@ -30,6 +30,7 @@ body {
   color: var(--text-color);
   background: var(--background);
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 img {
@@ -1336,12 +1337,18 @@ h3 {
     grid-template-columns: 1fr;
   }
 
+  .header-main {
+    grid-template-columns: auto 1fr auto;
+    gap: 12px;
+    min-height: 76px;
+  }
+
   .main-nav {
     position: absolute;
     left: 16px;
     right: 16px;
     top: calc(100% + 8px);
-    background: rgba(255,255,255,0.96);
+    background: rgba(255,255,255,0.98);
     border: 1px solid var(--border-color);
     border-radius: 16px;
     box-shadow: var(--shadow-soft);
@@ -1350,6 +1357,7 @@ h3 {
     align-items: flex-start;
     gap: 12px;
     padding: 16px;
+    z-index: 50;
   }
 
   .main-nav.open {
@@ -1358,11 +1366,11 @@ h3 {
 
   .nav-toggle {
     display: inline-flex;
-    margin-left: auto;
+    justify-self: end;
   }
 
-  .header-main {
-    grid-template-columns: auto auto auto;
+  .nav-actions {
+    justify-self: end;
   }
 
   .main-nav {
@@ -1387,10 +1395,30 @@ h3 {
 
   .header-main {
     min-height: 76px;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+  }
+
+  .brand {
+    min-width: 0;
   }
 
   .brand-copy strong {
     font-size: 1.25rem;
+  }
+
+  .brand-copy small {
+    letter-spacing: 0.08em;
+  }
+
+  .nav-actions {
+    display: flex;
+    gap: 8px;
+  }
+
+  .icon-button {
+    width: 36px;
+    height: 36px;
   }
 
   .hero-copy {
@@ -1455,5 +1483,74 @@ h3 {
 
   .cta-row .btn {
     width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: min(var(--container-width), calc(100% - 20px));
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 12vw, 3.4rem);
+  }
+
+  h2 {
+    font-size: clamp(2rem, 9vw, 2.6rem);
+  }
+
+  .announcement-bar {
+    font-size: 0.68rem;
+  }
+
+  .announcement-inner {
+    gap: 6px;
+  }
+
+  .social-inline {
+    gap: 6px;
+  }
+
+  .product-card,
+  .collection-card,
+  .featured-collection-item,
+  .form-panel,
+  .shop-main {
+    border-radius: 18px;
+  }
+
+  .product-card img,
+  .story-visual img,
+  .contact-visual-panel img {
+    height: 220px;
+  }
+
+  .story-grid,
+  .promo-banner,
+  .callout-inner,
+  .special-collection-banner,
+  .contact-layout,
+  .craft-layout {
+    padding: 14px;
+  }
+
+  .mini-feature {
+    padding: 14px 10px;
+  }
+
+  .shop-sidebar,
+  .shop-main {
+    padding: 14px;
+  }
+
+  .search-box input,
+  .contact-form input,
+  .contact-form textarea {
+    min-height: 46px;
+  }
+
+  .nav-toggle {
+    width: 38px;
+    height: 38px;
   }
 }

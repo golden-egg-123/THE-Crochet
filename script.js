@@ -162,6 +162,11 @@ function setupNavToggle() {
 
   if (!toggle || !nav) return;
 
+  const closeMenu = () => {
+    nav.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  };
+
   toggle.addEventListener('click', () => {
     const expanded = toggle.getAttribute('aria-expanded') === 'true';
     toggle.setAttribute('aria-expanded', String(!expanded));
@@ -169,10 +174,22 @@ function setupNavToggle() {
   });
 
   nav.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
-      nav.classList.remove('open');
-      toggle.setAttribute('aria-expanded', 'false');
-    });
+    link.addEventListener('click', closeMenu);
+  });
+
+  document.addEventListener('click', (event) => {
+    const clickedInsideNav = nav.contains(event.target);
+    const clickedToggle = toggle.contains(event.target);
+
+    if (!clickedInsideNav && !clickedToggle) {
+      closeMenu();
+    }
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 1024) {
+      closeMenu();
+    }
   });
 }
 
